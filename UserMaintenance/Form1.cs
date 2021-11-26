@@ -21,6 +21,7 @@ namespace UserMaintenance
             lblFullName.Text = Resource1.FullName;
             btnAdd.Text = Resource1.Add;
             btnFajlba.Text = Resource1.Fajlbairas;
+            btnTorles.Text = Resource1.Delete;
 
             lstUsers.DataSource = users;
             lstUsers.ValueMember = "ID";
@@ -53,6 +54,12 @@ namespace UserMaintenance
                 }
 
             }
+        }
+
+        private void btnTorles_Click(object sender, EventArgs e)
+        {
+            User valasztottUser = (User)lstUsers.SelectedItem;
+            users.Remove(valasztottUser);
         }
     }
 }
