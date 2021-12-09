@@ -80,6 +80,7 @@ namespace ProgramTervezesMintak
         private void btnBallColor_Click(object sender, EventArgs e)
         {
             Button kattintott = (Button)sender;
+            sender.GetType().ToString()
             ColorDialog cd = new ColorDialog();
             cd.Color = kattintott.BackColor;
             if (cd.ShowDialog() != DialogResult.OK) return;
